@@ -9,11 +9,18 @@ const initialState = {
 
 const mainReducer = (state = initialState, action) =>{
 
-switch  (action.type){
+switch (action.type) {
+ case "ADD_TO_FAVOURITES":
+  return {
+   ...state,
+   favourites: {
+    ...state.favourites,
+    content: [...state.favourites.content, action.payload],
+   },
+  };
 
-
-    default: return state
-
+ default:
+  return state;
 }
 
 

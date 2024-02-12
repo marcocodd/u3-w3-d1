@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Button } from "react-bootstrap";
 import Job from "./Job";
 import { useParams } from "react-router-dom";
 
@@ -29,16 +29,16 @@ const CompanySearchResults = () => {
   };
 
   return (
-    <Container>
-      <Row>
-        <Col className="my-3">
-          <h1 className="display-4">Job posting for: {params.company}</h1>
-          {jobs.map(jobData => (
-            <Job key={jobData._id} data={jobData} />
-          ))}
-        </Col>
-      </Row>
-    </Container>
+   <Container>
+    <Row>
+     <Col className="my-3">
+      <h1 className="display-4">Job posting for: {params.company}</h1>{" "}
+      {jobs.map((jobData) => (
+       <Job key={jobData._id} data={jobData} />
+      ))}
+     </Col>
+    </Row>
+   </Container>
   );
 };
 
