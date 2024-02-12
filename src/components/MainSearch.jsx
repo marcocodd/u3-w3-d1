@@ -1,14 +1,12 @@
 import { useState } from "react";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import Job from "./Job";
-import { useDispatch } from "react-redux";
+
 import { Link } from "react-router-dom";
 
 const MainSearch = () => {
  const [query, setQuery] = useState("");
  const [jobs, setJobs] = useState([]);
-
- const dispatch = useDispatch();
 
  const baseEndpoint = "https://strive-benchmark.herokuapp.com/api/jobs?search=";
 

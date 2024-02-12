@@ -32,8 +32,8 @@ const CompanySearchResults = () => {
 
  return (
   <Container>
-   <Link to="/favourites">Favoutites Page</Link>
    <Row>
+    <Link to="/favourites">Favoutites Page</Link>
     <Col className="my-3">
      <h1 className="display-4">Job posting for: {params.company}</h1>{" "}
      {jobs.map((jobData) => (
