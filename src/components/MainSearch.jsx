@@ -50,21 +50,8 @@ const MainSearch = () => {
      </Form>
     </Col>
     <Col xs={10} className="mx-auto mb-5">
-     {jobs.map((jobData, i) => (
-      <>
-       <Job key={jobData._id} data={jobData} />
-       <Button
-        onClick={() => {
-         console.log("Aggiungo ai favoriti");
-         dispatch({
-          type: "ADD_TO_FAVOURITES",
-          payload: jobData,
-         });
-        }}
-       >
-        Add Favourite
-       </Button>
-      </>
+     {jobs.map((jobData) => (
+      <Job key={jobData._id} data={jobData} />
      ))}
     </Col>
    </Row>
