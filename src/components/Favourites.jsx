@@ -1,6 +1,6 @@
 import { Container, Row, Col, ListGroup, ListGroupItem } from "react-bootstrap";
 import { useSelector } from "react-redux";
-import { Link } from "react-router-dom";
+
 
 const Favourites = () => {
  const favourites = useSelector((state) => state.favourites.content);
@@ -12,7 +12,7 @@ const Favourites = () => {
      <ListGroup>
       {favourites.map((favourite, i) => (
        <ListGroupItem className="bg-light text-warning" key={i}>
-        <a href= {favourite.company_name}</a>
+        <a href={favourite.url}> {favourite.company_name}</a>
        </ListGroupItem>
       ))}
      </ListGroup>
